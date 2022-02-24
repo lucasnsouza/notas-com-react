@@ -7,19 +7,16 @@ class ListaDeNotas extends Component
         return (
             <div className="container">
                 <ul className="list-group">
-                    <li className="list-group-item">
-                        <CardNota/>
-                    </li>
-                </ul>
-                <ul className="list-group">
-                    <li className="list-group-item">
-                        <CardNota/>
-                    </li>
-                </ul>
-                <ul className="list-group">
-                    <li className="list-group-item">
-                        <CardNota/>
-                    </li>
+                {Array.of("Trabalho", "Estudos", "Geral").map((categoria) => {
+                    return (
+                        <li className="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <CardNota />
+                            </div>
+                            <span class="badge bg-primary rounded-pill">{categoria}</span>
+                        </li>
+                    );
+                })}
                 </ul>
             </div>
         );

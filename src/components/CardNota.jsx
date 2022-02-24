@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class CardNota extends Component {
-    state = {}
     render() {
         return (
             <div className="card" style={{ width: "18rem" }}>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CardNota from "./CardNota";
 
 export default class ListaDeNotas extends Component
 {
@@ -7,12 +8,7 @@ export default class ListaDeNotas extends Component
             <div className="container">
                 <ul className="list-group">
                     <li className="list-group-item">
-                        <div className="card" style={{ width: "18rem" }}>
-                            <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
+                        <CardNota/>
                     </li>
                 </ul>
             </div>

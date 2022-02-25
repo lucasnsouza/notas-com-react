@@ -3,6 +3,11 @@ import CardNota from "./CardNota";
 
 class ListaDeNotas extends Component
 {
+    //o nosso construtor só vai receber as propriedades do pai
+    //por isso não pecisamos declarar um construtor, o JS já faz isso debaixo dos panos
+    // constructor(props) {
+    //     super(props);
+    // }
     render() {
         return (
                 <ul className="list-group list-group-horizontal">
@@ -12,13 +17,12 @@ class ListaDeNotas extends Component
                  por isso deve ser único. para garantir isso, fiz uma concatenação para atribuir um
                  nome individual para cada 'key' 
                 */}
-                {Array.of("Trabalho", "Estudos", "Geral").map((categoria, index) => {
+                {this.props.notas.map((nota, index) => {
                     return (
                         <li key={index} className="list-group-item align-items-start">
                             <div className="ms-2">
-                                <CardNota />
+                                <CardNota titulo={nota.titulo} texto={nota.texto}/>
                             </div>
-                            <span className="badge bg-primary rounded-pill">{categoria}</span>
                         </li>
                     );
                 })}
